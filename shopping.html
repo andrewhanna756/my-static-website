@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra &amp; Twine — Indoor Plant Shop</title>
+
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f7f5f0;
+        }
+
+        /* Product image hover effect: scale up and brighten */
+        .product-img-wrap {
+            overflow: hidden;
+            background-color: #e8e4da;
+        }
+
+        .product-img-wrap img {
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .product-card:hover .product-img-wrap img {
+            transform: scale(1.12);
+            filter: brightness(1.08);
+        }
+
+        .product-card {
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .price-tag {
+            color: #2f6b4f;
+            font-weight: 700;
+        }
+
+        .site-footer {
+            background-color: #2f3b32;
+            color: #e8e4da;
+        }
+
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .product-card,
+            .product-img-wrap img {
+                transition: none;
+            }
+            .product-card:hover {
+                transform: none;
+            }
+            .product-card:hover .product-img-wrap img {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= Header ================= -->
+    <header class="py-4 mb-4 border-bottom bg-white">
+        <div class="container d-flex align-items-center gap-3">
+            <!-- Company logo (inline SVG so it always loads) -->
+            <svg width="42" height="42" viewBox="0 0 48 48" role="img" aria-label="Terra and Twine logo">
+                <circle cx="24" cy="24" r="23" fill="#2f6b4f"></circle>
+                <path d="M24 36 V18" stroke="#e8e4da" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M24 22 C16 22 14 14 14 14 C22 14 24 22 24 22 Z" fill="#8bc49a"></path>
+                <path d="M24 26 C32 26 34 18 34 18 C26 18 24 26 24 26 Z" fill="#a9d6b4"></path>
+            </svg>
+            <div>
+                <h1 class="h4 mb-0">Terra &amp; Twine</h1>
+                <p class="mb-0 text-muted small">Indoor plants, grown slowly.</p>
+            </div>
+            <div class="ms-auto">
+                <a href="index.html" class="text-decoration-none me-3 small">Home</a>
+                <a href="cycling/index.html" class="text-decoration-none me-3 small">My Hobby</a>
+                <a href="tables.html" class="text-decoration-none small">Resources</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================= Products ================= -->
+    <main class="container">
+        <h2 class="h5 mb-4">This week's plants</h2>
+
+        <!-- Bootstrap grid: 1 column on phones, 2 on small, 3 on medium, 4 on large -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <!-- Product 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://thursd.com/storage/media/89503/A-multicolored-Hibiscus-flowers-in-a-garden.jpg"
+                             class="img-fluid w-100" alt="Monstera Deliciosa in a clay pot">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Monstera Deliciosa</h3>
+                        <p class="price-tag mb-3">$45.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://cdn.shopify.com/s/files/1/0094/2823/8432/files/AdobeStock_130280466.jpg?v=1699990611"
+                             class="img-fluid w-100" alt="Snake Plant with upright leaves">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Snake Plant</h3>
+                        <p class="price-tag mb-3">$28.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrYxR3g8btZWgClKnahrpfc7HrIisqyHNBkK3h7ue_uwcSL5lmvtKpfRk&amp;s=10"
+                             class="img-fluid w-100" alt="Golden Pothos trailing from a hanging pot">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Golden Pothos</h3>
+                        <p class="price-tag mb-3">$22.50</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://www.flowerpower.com.au/wordpress/wp-content/uploads/2014/08/agapanthus-3539814_1920-crop-300x300.jpg"
+                             class="img-fluid w-100" alt="Fiddle Leaf Fig with broad green leaves">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Fiddle Leaf Fig</h3>
+                        <p class="price-tag mb-3">$68.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaaysGzSERVCh9tGv_IQ7v2mY2yVFGPN-atgked0NkpXe_Y_HIcb86NIPP&amp;s=10"
+                             class="img-fluid w-100" alt="ZZ Plant with glossy dark leaves">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">ZZ Plant</h3>
+                        <p class="price-tag mb-3">$34.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXo8A0FiNcliJYGKQ038nTpupdqAsdgu10fmSgkX854UgqzjZawlvmZY&amp;s=10"
+                             class="img-fluid w-100" alt="Peace Lily with a white flower">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Peace Lily</h3>
+                        <p class="price-tag mb-3">$26.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTRHCZBJon44JKGehser-MT2_TReRBibbTdEK_7u3mPKdow4swjNzpVYY&amp;s=10"
+                             class="img-fluid w-100" alt="Rubber Plant with deep burgundy leaves">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Rubber Plant</h3>
+                        <p class="price-tag mb-3">$39.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNOWb5OT8Ner0YnCYdVKJ_Bqzb1upr4I6PbaZU3rnVOw&amp;s"
+                             class="img-fluid w-100" alt="Calathea with patterned striped leaves">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Calathea Orbifolia</h3>
+                        <p class="price-tag mb-3">$52.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://media.bunnings.com.au/api/public/content/2f3d0fa0272a4b4f811a546c332fc355?v=d6e929b9"
+                             class="img-fluid w-100" alt="Aloe Vera in a terracotta pot">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">Aloe Vera</h3>
+                        <p class="price-tag mb-3">$18.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm product-card">
+                    <div class="product-img-wrap">
+                        <img src="https://jimsmowing.com.au/wp-content/uploads/2025/07/lavender.jpg"
+                             class="img-fluid w-100" alt="String of Pearls trailing succulent">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h6">String of Pearls</h3>
+                        <p class="price-tag mb-3">$31.00</p>
+                        <button type="button" class="btn btn-success mt-auto">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= Footer ================= -->
+    <footer class="site-footer mt-5 py-4">
+        <div class="container">
+            <div class="row align-items-center g-3">
+
+                <!-- Company logo next to the form -->
+                <div class="col-12 col-lg-2 text-center text-lg-start">
+                    <svg width="56" height="56" viewBox="0 0 48 48" role="img" aria-label="Terra and Twine logo">
+                        <circle cx="24" cy="24" r="23" fill="#8bc49a"></circle>
+                        <path d="M24 36 V18" stroke="#2f3b32" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M24 22 C16 22 14 14 14 14 C22 14 24 22 24 22 Z" fill="#2f6b4f"></path>
+                        <path d="M24 26 C32 26 34 18 34 18 C26 18 24 26 24 26 Z" fill="#3f8a63"></path>
+                    </svg>
+                </div>
+
+                <!-- Horizontal contact form -->
+                <div class="col-12 col-lg-10">
+                    <p class="mb-2 small">Leave your details and we'll send you care guides and restock alerts.</p>
+                    <form class="row row-cols-lg-auto g-2 align-items-center">
+
+                        <div class="col-12 col-lg-auto">
+                            <label class="visually-hidden" for="customerName">Name</label>
+                            <input type="text" class="form-control" id="customerName" placeholder="Name">
+                        </div>
+
+                        <div class="col-12 col-lg-auto">
+                            <label class="visually-hidden" for="customerEmail">Email</label>
+                            <input type="email" class="form-control" id="customerEmail" placeholder="Email">
+                        </div>
+
+                        <div class="col-12 col-lg-auto">
+                            <label class="visually-hidden" for="customerPhone">Phone</label>
+                            <input type="tel" class="form-control" id="customerPhone" placeholder="Phone">
+                        </div>
+
+                        <div class="col-12 col-lg-auto">
+                            <button type="submit" class="btn btn-success">Send details</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <hr class="my-4 border-light opacity-25">
+            <p class="mb-0 small text-center">&copy; 2026 Terra &amp; Twine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS bundle (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

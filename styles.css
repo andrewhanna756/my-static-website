@@ -1,0 +1,108 @@
+/* ===========================================================
+   styles.css — CSS for "My Childhood" (index.html)
+   =========================================================== */
+
+/* 1. Font family for the whole page */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #fdf6ec;   /* 4. Background colour for the page */
+    color: #3a3a3a;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 2. Heading colours + font sizes to create a visual hierarchy */
+h1 {
+    color: #2c3e50;
+    font-size: 2.4rem;
+    text-align: center;              /* 5. Text alignment */
+    background-color: #eaf2f8;       /* 4. Background colour for a section */
+    padding: 20px;                   /* 7. Padding around headings */
+    margin: 30px 0 15px 0;           /* 7. Margin around headings */
+    border-radius: 8px;
+}
+
+h2 {
+    color: #16a085;
+    font-size: 1.5rem;
+    text-align: left;                /* 5. Text alignment */
+    border-left: 5px solid #16a085;
+    padding: 8px 15px;               /* 7. Padding around subheadings */
+    margin: 25px 0 10px 0;           /* 7. Margin around subheadings */
+    background-color: #f4fbfa;
+}
+
+/* 3. Paragraph text colour, chosen to contrast well with the light background */
+p {
+    color: #34495e;
+    font-size: 1rem;
+    text-align: left;                /* 5. Text alignment */
+    margin: 10px 0 10px 20px;        /* 7. Margin around paragraphs */
+    padding: 6px 10px;               /* 7. Padding around paragraphs */
+}
+
+/* 6. Emphasise bold and italic text within paragraphs */
+p strong {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+p em {
+    color: #d35400;
+    font-style: italic;
+}
+
+/* Images: centre them and give them a little polish */
+img {
+    display: block;
+    margin: 15px auto;               /* 7. Margin/spacing around images */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 8. Link colour and underline styling */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2980b9;
+}
+
+a:hover {
+    color: #1a5276;
+    text-decoration: underline;
+}
+
+/* "Back to top" link container */
+.back-to-top {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* -----------------------------------------------------------
+   Shared site navigation
+   ----------------------------------------------------------- */
+.site-nav {
+    background-color: #2c3e50;
+    padding: 12px 20px;
+    margin: -20px -20px 24px -20px;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+}
+
+.site-nav a {
+    color: #eaf2f8;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 14px;
+    border-bottom: none;
+}
+
+.site-nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
